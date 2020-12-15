@@ -21,7 +21,7 @@ class AVLTree():
     # Function to insert a node
     def insert_node(self, root, key):
 
-        # Find the correct location and insert the node
+        # Find the location and insert the node
         if not root:
             return Node(key)
         elif key < root.key:
@@ -31,7 +31,7 @@ class AVLTree():
 
         root.height = 1 + max(self.getHeight(root.left), self.getHeight(root.right))
 
-        # Update the balance factor and balance the tree
+        # Update the balance factor and balance the tree by doing left or right rotation accordingly.
         balanceFactor = self.getBalance(root)
         if balanceFactor > 1:
             if key < root.left.key:
