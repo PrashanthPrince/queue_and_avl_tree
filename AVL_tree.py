@@ -8,7 +8,7 @@ Description: Implementation of AVL tree.
 import sys
 
 # Creating a node for the tree
-class Node(object):
+class Node():
     def __init__(self, key):
         self.key = key
         self.left = None
@@ -16,7 +16,7 @@ class Node(object):
         self.height = 1
 
 
-class AVLTree(object):
+class AVLTree():
 
     # Function to insert a node
     def insert_node(self, root, key):
